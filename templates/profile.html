@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="box" style="display: flex; gap: 20px; align-items: center;">
+    <div class="user-avatar" style="width: 70px; height: 70px; font-size: 28px;">{{ nome[0].upper() if nome else 'M' }}</div>
+    <div>
+        <h3 style="margin: 0; color: #1a5e42;">{{ email }}</h3>
+        <p style="margin: 3px 0; font-size: 13px; color: #555;"><strong>E-mail:</strong> {{ email }}</p>
+        <p style="margin: 3px 0; font-size: 13px; color: #555;"><strong>Idade:</strong> {{ idade }} anos</p>
+        <p style="margin: 3px 0; font-size: 13px; color: #555;"><strong>Peso:</strong> {{ peso }} kg</p>
+        <p style="margin: 3px 0; font-size: 13px; color: #555;"><strong>Altura:</strong> {{ altura }} m</p>
+    </div>
+</div>
+
+<div class="box">
+    <h3 style="color: #1a5e42;">Minhas Metas</h3>
+    <ul style="line-height: 1.8;">
+        <li>Calcular o IMC mensalmente</li>
+        <li>Praticar atividade física 3x por semana</li>
+        <li>Manter uma alimentação balanceada</li>
+    </ul>
+    <a href="{{ url_for('imc_route') }}" class="btn" style="width: auto; padding: 8px 15px;">Calcular meu IMC</a>
+</div>
+{% endblock %}

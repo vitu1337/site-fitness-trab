@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: #eef2f5;
+    color: #2c3e50;
+}
+
+header {
+    background-color: #2e7d32;
+    color: white;
+    padding: 18px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header h2 { margin: 0; font-size: 22px; }
+
+nav a {
+    color: #e8f5e9;
+    text-decoration: none;
+    margin-left: 18px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+nav a:hover { color: #ffffff; }
+
+.container {
+    max-width: 850px;
+    margin: 35px auto;
+    padding: 0 15px;
+}
+
+.hero {
+    background-color: #2e7d32;
+    color: white;
+    padding: 35px 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.hero h1 { margin-top: 0; }
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.box {
+    background: white;
+    padding: 22px;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    margin-bottom: 20px;
+}
+
+.box h3 { color: #2e7d32; margin-top: 0; }
+
+label {
+    display: block;
+    margin-top: 12px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+input, select {
+    width: 100%;
+    padding: 9px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn {
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn:hover { background-color: #1b5e20; }
+
+.tag {
+    background: #2e7d32;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 14px;
+    display: inline-block;
+}
+
+.user-avatar {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: #2e7d32;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 20px;
+}

@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="box" style="max-width: 380px; margin: 30px auto;">
+    <h2>Entrar na sua conta</h2>
+    <form action="{{ url_for('login') }}" method="POST">
+        <label>Usuário / E-mail</label>
+        <input type="text" name="usuario" value="maykol@gmail.com" required>
+
+        <label>Senha</label>
+        <div style="position: relative;">
+            <input type="password" id="senha" name="senha" required style="padding-right: 35px;">
+            <span id="togglePassword" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer;">👁️</span>
+        </div>
+        <p id="capsWarning" style="display: none; color: red; font-size: 11px; margin-top: 5px;">⚠️ Caps Lock está ativado!</p>
+
+        <button type="submit" class="btn">Entrar</button>
+    </form>
+</div>
+
+<script>
+    const passwordInput = document.getElementById('senha');
+    const togglePassword = document.getElementById('togglePassword');
+    const capsWarning = document.getElementById('capsWarning');
+
+    togglePassword.addEventListener('click', function () {
+        const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+        passwordInput.setAttribute('type', type);
+    });
+
+    window.addEventListener('keydown', function (e) {
+        if (e.getModifierState('CapsLock')) {
+            capsWarning.style.display = 'block';
+        } else {
+            capsWarning.style.display = 'none';
+        }
+    });
+
+    passwordInput.addEventListener('keyup', function (e) {
+        if (e.getModifierState('CapsLock')) {
+            capsWarning.style.display = 'block';
+        } else {
+            capsWarning.style.display = 'none';
+        }
+    });
+</script>
+{% endblock %}
